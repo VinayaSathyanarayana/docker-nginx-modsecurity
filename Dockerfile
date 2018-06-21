@@ -182,7 +182,7 @@ RUN gunzip GeoLiteCity.dat.gz
 COPY IN.html /etc/nginx/IN.html
 COPY US.html /etc/nginx/US.html
 # Note nginx.conf is modified for Geo
-COPY nginx.conf.slj /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 RUN nginx -V
 RUN nginx -t
