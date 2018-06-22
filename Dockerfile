@@ -172,15 +172,17 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
         && ln -sf /dev/stderr /var/log/nginx/error.log
 
 # Start of Geo IP
-RUN apk add geoipupdate
+#RUN apk add geoipupdate
 RUN mkdir /etc/nginx/geoip
 WORKDIR /etc/nginx/geoip
 RUN wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
 RUN wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 RUN gunzip GeoIP.dat.gz
 RUN gunzip GeoLiteCity.dat.gz
-COPY IN.html /etc/nginx/IN.html
-COPY US.html /etc/nginx/US.html
+RUN mkdir /www
+RUN mkdir /www/data
+COPY IN.html /www/data/IN.html
+COPY US.html /www/data/US.html
 # Note nginx.conf is modified for Geo
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
