@@ -6,3 +6,12 @@ You can refer to the [official nginx image documentation](https://hub.docker.com
 When you provide your configuration you can enable modsecurity. Please refer to [their wiki](https://github.com/SpiderLabs/ModSecurity/wiki) for documentation.
 
 NOTE: no rules are shipped with this container, if you enable modsecurity you need to provide your own
+
+
+docker build --tag="kateel:001" .
+docker run -p 6080:80 kateel:001
+
+Point browser to http://ipaddr:6080/IN.html
+
+To Test use : https://www.locabrowser.com/
+
