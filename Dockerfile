@@ -3,6 +3,8 @@ FROM alpine:3.7
 MAINTAINER Durga Devotee "devotee@kateel.temple"
 
 ENV NGINX_VERSION 1.14.0
+ENV MODSEC_CRS_VERSION v3.0.2
+
 #RUN apt-get clean && apt-get update
 RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
         && CONFIG="\
@@ -190,9 +192,28 @@ RUN nginx -V
 RUN nginx -t
 # End of Geo IP
 
+#MOD SECURITY RULES START
+COPY proxy.conf /etc/nginx/conf.d/proxy.conf
+COPY echo.conf /etc/nginx/conf.d/echo.conf
+RUN mkdir /etc/nginx/modsec
+# What is working directory for wget and mv
+WORKDIR /etc/nginx/modsec
+RUN wget https://raw.githubusercontent.com/SpiderLabs/ModSecurity/v3/master/modsecurity.conf-recommended
+RUN mv modsecurity.conf-recommended modsecurity.conf
+COPY main.conf /etc/nginx/modsec/main.conf
+RUN wget https://github.com/SpiderLabs/owasp-modsecurity-crs/archive/v3.0.2.tar.gz
+RUN  tar -xzvf v3.0.2.tar.gz
+RUN  mv owasp-modsecurity-crs-3.0.2 /usr/local
+WORKDIR  /usr/local/owasp-modsecurity-crs-3.0.2
+RUN  cp crs-setup.conf.example crs-setup.conf
+#MOD SECURITY RULES END
+
 # Commented out as this is done above
 #COPY nginx.conf /etc/nginx/nginx.conf
 #COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
+
+RUN nginx -V
+RUN nginx -t
 
 EXPOSE 80 443
 
