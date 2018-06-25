@@ -27,3 +27,4 @@ Redirection
 
 https://amplify.nginx.com/docs/
 
+https://docs.nginx.com/nginx-waf/
