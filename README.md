@@ -22,4 +22,8 @@ Status
 Currently blocks Countries
 
 ToDo
+
 Redirection
+
+https://amplify.nginx.com/docs/
+
