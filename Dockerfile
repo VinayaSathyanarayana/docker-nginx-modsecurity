@@ -210,6 +210,7 @@ RUN  cp crs-setup.conf.example crs-setup.conf
 #COPY nginx.conf /etc/nginx/nginx.conf
 #COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
+RUN ls -l /etc/nginx/modsec
 RUN nginx -V
 RUN nginx -t
 
