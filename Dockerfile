@@ -214,6 +214,8 @@ RUN  cp crs-setup.conf.example /etc/nginx/modsec/crs-setup.conf
 RUN ls -l /etc/nginx/modsec
 RUN ls -l /usr/local/owasp-modsecurity-crs-3.0.2
 RUN nginx -V
+RUN nginx -V 2>&1 | grep -- 'http_geoip_module'
+RUN nginx -V 2>&1 | grep -- 'stream_geoip_module'
 RUN nginx -t
 
 EXPOSE 80 443
