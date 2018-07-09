@@ -188,8 +188,6 @@ COPY US.html /www/data/US.html
 # Note nginx.conf is modified for Geo
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
-RUN nginx -V
-RUN nginx -t
 # End of Geo IP
 
 #MOD SECURITY RULES START
