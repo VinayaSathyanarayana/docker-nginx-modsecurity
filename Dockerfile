@@ -38,15 +38,16 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
                 --with-http_auth_request_module \
                 --with-http_xslt_module=dynamic \
                 --with-http_image_filter_module=dynamic \
-                --with-http_geoip_module=dynamic \
-                --with-stream_geoip_module=dynamic \
+#                --with-http_geoip_module=dynamic \
+                --with-http_geoip_module \
+                --with-stream_geoip_module \
                 --with-http_perl_module=dynamic \
                 --with-threads \
                 --with-stream \
                 --with-stream_ssl_module \
                 --with-stream_ssl_preread_module \
                 --with-stream_realip_module \
-                --with-stream_geoip_module=dynamic \
+#                --with-stream_geoip_module=dynamic \
                 --with-http_slice_module \
                 --with-mail \
                 --with-mail_ssl_module \
