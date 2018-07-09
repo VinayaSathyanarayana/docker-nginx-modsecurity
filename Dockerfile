@@ -211,11 +211,12 @@ RUN  cp crs-setup.conf.example /etc/nginx/modsec/crs-setup.conf
 #COPY nginx.conf /etc/nginx/nginx.conf
 #COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
+RUN ls -l /etc/nginx/geoip
 RUN ls -l /etc/nginx/modsec
 RUN ls -l /usr/local/owasp-modsecurity-crs-3.0.2
 RUN ls -l /etc/nginx/modules
 RUN ls -l /usr/lib/nginx/modules
-RUN ls -l /etc/nginx/geoip
+
 RUN nginx -V
 RUN nginx -V 2>&1 | grep -- 'http_geoip_module'
 RUN nginx -V 2>&1 | grep -- 'stream_geoip_module'
