@@ -15,7 +15,11 @@ sudo docker run -p 6080:80 kateel:001
 
 Point browser to http://ipaddr:6080/IN.html
 
-To Test use : https://www.locabrowser.com/
+To Test use : 
+
+https://www.webpagetest.org/
+
+https://www.locabrowser.com/
 
 
 Status
