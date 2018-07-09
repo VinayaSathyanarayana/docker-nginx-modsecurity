@@ -204,6 +204,7 @@ RUN  tar -xzvf v3.0.2.tar.gz
 RUN  mv owasp-modsecurity-crs-3.0.2 /usr/local
 WORKDIR  /usr/local/owasp-modsecurity-crs-3.0.2
 RUN  cp crs-setup.conf.example crs-setup.conf
+RUN  cp crs-setup.conf.example /etc/nginx/modsec/crs-setup.conf
 #MOD SECURITY RULES END
 
 # Commented out as this is done above
@@ -211,6 +212,7 @@ RUN  cp crs-setup.conf.example crs-setup.conf
 #COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
 RUN ls -l /etc/nginx/modsec
+RUN ls -l /usr/local/owasp-modsecurity-crs-3.0.2
 RUN nginx -V
 RUN nginx -t
 
