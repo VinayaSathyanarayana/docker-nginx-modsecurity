@@ -21,6 +21,9 @@ https://www.webpagetest.org/
 
 https://www.locabrowser.com/
 
+https://www.geoscreenshot.com
+
+https://geopeeker.com
 
 Status
 Currently blocks Countries
