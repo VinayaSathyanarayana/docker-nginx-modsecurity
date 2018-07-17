@@ -24,6 +24,7 @@ https://www.locabrowser.com/
 
 Status
 Currently blocks Countries
+Hardened
 
 ToDo
 
