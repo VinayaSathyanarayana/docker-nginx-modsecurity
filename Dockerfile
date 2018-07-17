@@ -221,7 +221,7 @@ RUN ls -l /usr/lib/nginx/modules
 
 RUN nginx -V
 RUN echo "Jai Durga Maa"
-RUN nginx -V | grep geo
+#RUN nginx -V | grep geo
 #RUN nginx -V 2>&1 | grep -- 'http_geoip_module'
 #RUN nginx -V 2>&1 | grep -- 'stream_geoip_module'
 RUN nginx -t
