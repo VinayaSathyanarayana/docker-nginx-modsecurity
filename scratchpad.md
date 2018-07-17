@@ -8,3 +8,7 @@ geoip_country_code:\t $geoip_country_code\n";
 https://www.viget.com/articles/split-test-traffic-distribution-with-nginx/
 
 https://openresty.org/download/agentzh-nginx-tutorials-en.html
+
+https://hub.docker.com/r/wernight/alpine-nginx-pagespeed/~/dockerfile/
+
+https://www.modpagespeed.com/doc/build_ngx_pagespeed_from_source
