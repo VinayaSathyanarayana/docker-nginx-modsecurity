@@ -17,6 +17,10 @@ Point browser to http://ipaddr:6080/IN.html
 
 To Test use : 
 
+```sh
+sudo curl -i http://localhost:6080/
+```
+
 https://www.webpagetest.org/
 
 https://www.locabrowser.com/
