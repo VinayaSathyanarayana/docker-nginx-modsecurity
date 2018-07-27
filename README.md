@@ -40,3 +40,13 @@ Redirection
 https://amplify.nginx.com/docs/
 
 https://docs.nginx.com/nginx-waf/
+
+
+References:
+
+http://www.netnea.com/cms/remo-a-rule-editor-for-modsecurity/
+
+https://www.netnea.com/cms/core-rule-set-inventory/
+
+http://www.waf-fle.org/about/
+
