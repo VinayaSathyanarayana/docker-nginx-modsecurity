@@ -50,3 +50,4 @@ https://www.netnea.com/cms/core-rule-set-inventory/
 
 http://www.waf-fle.org/about/
 
+https://github.com/agile6v/awesome-nginx
