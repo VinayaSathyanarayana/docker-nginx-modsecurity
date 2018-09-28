@@ -30,8 +30,9 @@ https://www.geoscreenshot.com
 https://geopeeker.com
 
 Status
-Currently blocks Countries
-Hardened
+* Currently blocks Countries
+* Hardened
+* WAF
 
 ToDo
 
