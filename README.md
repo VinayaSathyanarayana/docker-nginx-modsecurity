@@ -29,6 +29,9 @@ https://www.geoscreenshot.com
 
 https://geopeeker.com
 
+https://www.dotcom-tools.com/website-speed-test.aspx
+
+
 Status
 * Currently blocks Countries
 * Hardened
