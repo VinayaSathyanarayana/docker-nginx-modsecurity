@@ -5,7 +5,7 @@ You can refer to the [official nginx image documentation](https://hub.docker.com
 
 When you provide your configuration you can enable modsecurity. Please refer to [their wiki](https://github.com/SpiderLabs/ModSecurity/wiki) for documentation.
 
-NOTE: no rules are shipped with this container, if you enable modsecurity you need to provide your own
+NOTE: Default rules are shipped with this container, modify as appropriate
 
 
 sudo docker build --tag="kateel:001" .
