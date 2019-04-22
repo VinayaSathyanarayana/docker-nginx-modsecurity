@@ -175,14 +175,36 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 
 #RUN cat  /var/log/nginx/error.log
 #RUN echo "Jai Durga Maa Point 1"
-# Start of Geo IP
+# Start of GeoIP (Old) Download
 #RUN apk add geoipupdate
 RUN mkdir /etc/nginx/geoip
 WORKDIR /etc/nginx/geoip
-RUN wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
-RUN wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
-RUN gunzip GeoIP.dat.gz
-RUN gunzip GeoLiteCity.dat.gz
+#RUN wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
+#RUN wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+#RUN gunzip GeoIP.dat.gz
+#RUN gunzip GeoLiteCity.dat.gz
+# End of GeoIP (Old) Download
+
+# Start of GeoIP2 (New) 
+
+RUN mkdir /etc/nginx/geoip2
+WORKDIR /etc/nginx/geoip2
+RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.tar.gz
+RUN gunzip GeoLite2-City.tar.gz
+RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-City-CSV.zip
+RUN gunzip GeoLite2-City-CSV.zip
+RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz
+RUN gunzip GeoLite2-Country.tar.gz
+RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country-CSV.zip
+RUN gunzip GeoLite2-Country-CSV.zip
+RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN.tar.gz
+RUN gunzip GeoLite2-ASN.tar.gz
+RUN wget https://geolite.maxmind.com/download/geoip/database/GeoLite2-ASN-CSV.zip
+RUN gunzip GeoLite2-ASN-CSV.zip
+
+# End of GeoIP2 (New)
+
+# Start of GeoIP Config
 RUN mkdir /www
 RUN mkdir /www/data
 COPY IN.html /www/data/IN.html
@@ -190,7 +212,7 @@ COPY US.html /www/data/US.html
 # Note nginx.conf is modified for Geo
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
-# End of Geo IP
+# End of GeoIP Config
 
 #MOD SECURITY RULES START
 COPY proxy.conf /etc/nginx/conf.d/proxy.conf
