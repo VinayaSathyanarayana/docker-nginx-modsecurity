@@ -8,7 +8,7 @@ When you provide your configuration you can enable modsecurity. Please refer to 
 NOTE: Default rules are shipped with this container, modify as appropriate
 
 
-sudo docker build --tag="kateel:001" .
+sudo docker build . --tag="kateel:001" .
 
 
 sudo docker run -p 6080:80 kateel:001
