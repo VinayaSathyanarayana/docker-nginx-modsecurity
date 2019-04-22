@@ -1,3 +1,22 @@
+GeoIP2 Update Notes Start
+
+For Commercial Version: https://docs.nginx.com/nginx/admin-guide/dynamic-modules/geoip2/
+
+Instructions to compile and Build
+https://dev.iachieved.it/iachievedit/geoip2-and-nginx/
+https://github.com/leev/ngx_http_geoip2_module
+http://www.nginxer.com/records/how-to-install-the-geoip2-module-for-nginx-on-the-baota-panel/
+https://medium.com/@karljohnson/geoip-discontinuation-upgrade-to-geoip2-with-nginxon-centos-c2a3dbcf8fd
+
+https://github.com/karljohns0n/nginx-more
+https://tech.david-cheong.com/country-blocking-using-nginx-with-geoip2-in-ubuntu-16-04/
+
+
+
+
+
+GeoIP2 Update Notes End
+
 ``` shell
 return 200 "NGINX has routed this request to the default site.\n
 http_x_realip:\t $http_x_real_ip\n
