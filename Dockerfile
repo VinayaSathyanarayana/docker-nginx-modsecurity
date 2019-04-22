@@ -70,6 +70,10 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
                 gd-dev \
                 geoip-dev \
                 perl-dev \
+                libpcre3-dev \
+                zlib1g-dev \
+                libssl-dev \
+                libxslt1-dev \
         && apk add --no-cache --virtual .libmodsecurity-deps \
                 pcre-dev \
                 libxml2-dev \
