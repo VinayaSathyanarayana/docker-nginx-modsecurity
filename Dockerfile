@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.11.3
 
 LABEL MAINTAINER="Durga Devotee <devotee@kateel.temple>"
 
