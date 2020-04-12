@@ -1,4 +1,6 @@
 # NGINX with libModSecurity + ModSecurity-nginx connector
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FVinayaSathyanarayana%2Fkateelsecure.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FVinayaSathyanarayana%2Fkateelsecure?ref=badge_shield)
+
 The dockerfile of this container has been copied from the [official nginx repo (alpine variant)](https://raw.githubusercontent.com/nginxinc/docker-nginx/3e8a6ee0603bf6c9cd8846c5fa43e96b13b0f44b/mainline/alpine/Dockerfile)  and has been modified to add [ModSecurity library (v3)](https://github.com/SpiderLabs/ModSecurity/tree/v3/master)  + [ModSecurity nginx connector](https://github.com/SpiderLabs/ModSecurity-nginx).
 
 You can refer to the [official nginx image documentation](https://hub.docker.com/_/nginx/) for instructions on how to use this image.
@@ -55,3 +57,7 @@ https://www.netnea.com/cms/core-rule-set-inventory/
 http://www.waf-fle.org/about/
 
 https://github.com/agile6v/awesome-nginx
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FVinayaSathyanarayana%2Fkateelsecure.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FVinayaSathyanarayana%2Fkateelsecure?ref=badge_large)
