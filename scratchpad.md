@@ -185,4 +185,7 @@ $ curl localhost?testparam=test
 </body>
 </html>
 
+--------------
+https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/?_ga=2.181998631.1251754332.1586653422-1698467903.1586653422#installing-a-prebuilt-package
+
 
