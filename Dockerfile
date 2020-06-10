@@ -2,7 +2,7 @@ FROM alpine:3.11.3
 
 LABEL MAINTAINER="Durga Devotee <devotee@kateel.temple>"
 
-ENV NGINX_VERSION 1.17.8
+ENV NGINX_VERSION 1.19.0
 ENV MODSEC_CRS_VERSION v3.3.0-rc1
 
 #RUN apt-get clean && apt-get update
